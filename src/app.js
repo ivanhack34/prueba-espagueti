@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     res.status(200).json({message: 'Ok!'})
 })
 
-app.use('/api.v1', quotesRouter)
+app.use('/api/v1', quotesRouter)
 
 app.listen(port, () => {
     console.log(`Server started at port ${port}`);

@@ -32,7 +32,16 @@ const postUser = (req, res) => {
             res.status(201).json(data)
         })
         .catch(err => {
-            res.status(400).json({message: err.message});
+            res.status(400).json({
+                message: err.message,
+                fields: {
+                    "first_name": "Pepito *",
+                    "last_name": "Varela *",
+                    "email": "varela_pepe09@gmail.com *",
+                    "password": "123Hola+ *",
+                    "birthday": "23/09/1987"
+                }
+            });
         })
 }
 
